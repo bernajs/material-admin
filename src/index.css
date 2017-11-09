@@ -9,5 +9,17 @@ body {
 }
 
 .container {
-  margin-left: 300px !important
+  margin-left: 300px !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: #000000 !important;
+}
+.active div {
+  color: #337ab7 !important;
 }

@@ -1,5 +1,6 @@
 import Sidebar from './sidebar'
 import Dashboard from './dashboard'
 import Header from './header'
+import DataTable from './datatable'
 
-export { Sidebar, Dashboard, Header }
+export { Sidebar, Dashboard, Header, DataTable }

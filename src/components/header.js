@@ -19,6 +19,11 @@ export default class Header extends Component {
     }
   }
   render() {
+    if (this.props.data) {
+      const value = this.props.data[0].value
+      const data = { nombre: 'Luis Bernardo' }
+      console.log(data[value])
+    }
     return (
       <AppBar
         title={this.props.title}

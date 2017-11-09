@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Link, Switch, Route } from 'react-router-dom'
 import { Sidebar, Dashboard, Header } from '../components'
+import { Usuarios } from '../views'
 
 export default class Navigation extends Component {
   render() {
@@ -24,9 +25,8 @@ export default class Navigation extends Component {
 const Routes = () => {
   return (
     <Switch>
-      <Route path="/" exact component={Dashboard} />
-      <Route path="/" exact component={Dashboard} />
-      <Route path="/" exact component={Dashboard} />
+      <Route path="/dashboard" exact component={Dashboard} />
+      <Route path="/usuarios" component={Usuarios} />
     </Switch>
   )
 }
