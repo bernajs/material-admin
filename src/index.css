@@ -23,3 +23,7 @@ a:hover {
 .active div {
   color: #337ab7 !important;
 }
+
+thead th {
+  font-size: 24px !important;
+}

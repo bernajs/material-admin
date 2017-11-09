@@ -45,8 +45,16 @@ export default class DataTable extends Component {
   render() {
     return (
       <Table>
-        <TableHeader>{this.renderHeader()}</TableHeader>
-        <TableBody>{this.renderRows()}</TableBody>
+        <TableHeader
+          adjustForCheckbox={false}
+          displaySelectAll={false}
+          className="table-row"
+        >
+          {this.renderHeader()}
+        </TableHeader>
+        <TableBody displayRowCheckbox={false} stripedRows={true}>
+          {this.renderRows()}
+        </TableBody>
       </Table>
     )
   }
