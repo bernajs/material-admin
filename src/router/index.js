@@ -11,11 +11,10 @@ export default class Navigation extends Component {
           <div className="container">
             <div className="row">
               <div className="col-12">
-                <h5>hola</h5>
+                <Routes />
               </div>
             </div>
           </div>
-          <Routes />
         </div>
       </BrowserRouter>
     )
