@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Drawer, MenuItem, RaisedButton, AppBar } from 'material-ui'
 import Header from './header'
+
 export default class Sidebar extends Component {
   constructor(props) {
     super(props)

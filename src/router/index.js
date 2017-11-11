@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Link, Switch, Route } from 'react-router-dom'
-import { Sidebar, Dashboard, Header } from '../components'
-import { Usuarios } from '../views'
+import { Sidebar, Header } from '../components'
+import { Usuarios, Dashboard } from '../views'
 
 export default class Navigation extends Component {
   render() {

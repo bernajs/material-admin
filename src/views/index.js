@@ -1,3 +1,4 @@
 import Usuarios from './usuarios'
+import Dashboard from './dashboard'
 
-export { Usuarios }
+export { Dashboard, Usuarios }
