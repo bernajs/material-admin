@@ -20,7 +20,7 @@ export default class DataTable extends Component {
   }
 
   renderHeader() {
-    return this.props.data.map((item, key) => {
+    return this.props.values.map((item, key) => {
       return <TableHeaderColumn key={key}>{item.title}</TableHeaderColumn>
     })
   }
@@ -32,17 +32,24 @@ export default class DataTable extends Component {
       { nombre: 'Luis Bernardo', apellido: 'García López', edad: 23 },
       { nombre: 'Luis Bernardo', apellido: 'García López', edad: 23 }
     ]
-    return data.map((item, key) => {
+    return this.props.data.map((item, key) => {
       return (
-        <TableRow>
-          {this.props.data.map((row, key) => {
-            return <TableRowColumn>{item[row.value]}</TableRowColumn>
+        <TableRow key={item.id}>
+          {this.props.values.map((row, key) => {
+            return (
+              <TableRowColumn key={item.id + key}>
+                {item[row.value]}
+              </TableRowColumn>
+            )
           })}
         </TableRow>
       )
     })
   }
   render() {
+    if (Object.keys(this.props.data).length === 0) {
+      return <div>Cargando...</div>
+    }
     return (
       <Table>
         <TableHeader
@@ -50,7 +57,7 @@ export default class DataTable extends Component {
           displaySelectAll={false}
           className="table-row"
         >
-          {this.renderHeader()}
+          <TableRow>{this.renderHeader()}</TableRow>
         </TableHeader>
         <TableBody displayRowCheckbox={false} stripedRows={true}>
           {this.renderRows()}

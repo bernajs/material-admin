@@ -23,15 +23,15 @@ export default class Sidebar extends Component {
           icon="menu"
         />
         <RaisedButton label="Menu" onClick={this.handleToggle} />
-        <Drawer open={this.state.open}>
+        <Drawer open={this.state.open} containerClassName="sidebar">
           <Header title="Menú" handleToggle={this.handleToggle} icon="close" />
           <NavLink to="/dashboard" activeClassName="active">
-            <MenuItem>Dashboard</MenuItem>
+            <MenuItem className="menu-item">Dashboard</MenuItem>
           </NavLink>
-          <MenuItem>Categorías</MenuItem>
-          <MenuItem>Negocios</MenuItem>
+          <MenuItem className="menu-item">Categorías</MenuItem>
+          <MenuItem className="menu-item">Negocios</MenuItem>
           <NavLink to="/usuarios" activeClassName="active">
-            <MenuItem>Usuarios</MenuItem>
+            <MenuItem className="menu-item">Usuarios</MenuItem>
           </NavLink>
         </Drawer>
       </div>

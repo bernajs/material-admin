@@ -1,4 +1,4 @@
 import { combineReducers } from 'redux'
-import data from './data'
+import usuarios from './usuarios_reducer'
 
-export default combineReducers({ data: data })
+export default combineReducers({ usuarios: usuarios })

@@ -27,3 +27,15 @@ a:hover {
 thead th {
   font-size: 22px !important;
 }
+
+.sidebar {
+  background-color: #262f3d !important;
+}
+.sidebar .menu-item {
+  border-bottom: 1px solid #353434 !important;
+  color: white !important;
+}
+
+.header{
+  background-color: #262f3d !important;
+}

@@ -13,8 +13,12 @@ class Usuarios extends Component {
       { title: 'Apellido', value: 'apellido' },
       { title: 'Edad', value: 'edad' }
     ]
-    return <DataTable data={data} />
+    return <DataTable data={this.props.usuarios} values={data} />
   }
 }
 
-export default connect(null, { get_usuarios })(Usuarios)
+function mapStateToProps({ usuarios }) {
+  return { usuarios }
+}
+
+export default connect(mapStateToProps, { get_usuarios })(Usuarios)

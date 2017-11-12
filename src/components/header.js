@@ -27,6 +27,7 @@ export default class Header extends Component {
     return (
       <AppBar
         title={this.props.title}
+        className="header"
         iconElementLeft={
           <IconButton
             onClick={() => {
