@@ -5,7 +5,8 @@ import {
   TableRow,
   TableRowColumn,
   TableHeader,
-  TableHeaderColumn
+  TableHeaderColumn,
+  CircularProgress
 } from 'material-ui'
 
 export default class DataTable extends Component {
@@ -48,7 +49,7 @@ export default class DataTable extends Component {
   }
   render() {
     if (Object.keys(this.props.data).length === 0) {
-      return <div>Cargando...</div>
+      return <CircularProgress className="center" />
     }
     return (
       <Table>

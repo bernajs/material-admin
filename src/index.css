@@ -9,7 +9,13 @@ body {
 }
 
 .container {
-  margin-left: 300px !important;
+  margin: 25px 25px 25px 300px !important;
+  width: calc(100% - 350px) !important;
+}
+
+.container-collapsed {
+  margin-left: 25px !important;
+  width: calc(100% - 25px) !important;
 }
 
 a {
@@ -20,6 +26,7 @@ a:hover {
   text-decoration: none !important;
   color: #000000 !important;
 }
+
 .active div {
   color: #337ab7 !important;
 }
@@ -36,6 +43,15 @@ thead th {
   color: white !important;
 }
 
-.header{
+.header {
   background-color: #262f3d !important;
+}
+
+.center {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }

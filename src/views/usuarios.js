@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { DataTable } from '../components'
+import { FAB, DataTable } from '../components'
 import { connect } from 'react-redux'
 import { get_usuarios } from '../actions/usuario_actions'
 
@@ -9,11 +9,16 @@ class Usuarios extends Component {
   }
   render() {
     const data = [
-      { title: 'Nombre', value: 'nombre' },
-      { title: 'Apellido', value: 'apellido' },
-      { title: 'Edad', value: 'edad' }
+      { title: 'Nombre', value: 'nombre', type: 'string', header: true },
+      { title: 'Apellido', value: 'apellido', type: 'string', header: true },
+      { title: 'Edad', value: 'edad', type: 'number', header: true }
     ]
-    return <DataTable data={this.props.usuarios} values={data} />
+    return (
+      <div>
+        <FAB position="top-right" route="usuario" data={data} />
+        <DataTable data={this.props.usuarios} values={data} />
+      </div>
+    )
   }
 }
 

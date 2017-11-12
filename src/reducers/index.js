@@ -1,4 +1,4 @@
 import { combineReducers } from 'redux'
 import usuarios from './usuarios_reducer'
-
-export default combineReducers({ usuarios: usuarios })
+import general from './general_reducers'
+export default combineReducers({ usuarios, general })

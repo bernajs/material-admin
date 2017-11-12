@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Drawer, MenuItem, RaisedButton, AppBar } from 'material-ui'
 import Header from './header'
+import { connect } from 'react-redux'
+import { toggle_sidebar } from '../actions/general'
 
-export default class Sidebar extends Component {
+class Sidebar extends Component {
   constructor(props) {
     super(props)
     this.state = { open: true }
@@ -12,6 +14,7 @@ export default class Sidebar extends Component {
 
   handleToggle() {
     this.setState({ open: !this.state.open })
+    // this.props.toggle_sidebar()
   }
 
   render() {
@@ -22,7 +25,6 @@ export default class Sidebar extends Component {
           handleToggle={this.handleToggle}
           icon="menu"
         />
-        <RaisedButton label="Menu" onClick={this.handleToggle} />
         <Drawer open={this.state.open} containerClassName="sidebar">
           <Header title="Menú" handleToggle={this.handleToggle} icon="close" />
           <NavLink to="/dashboard" activeClassName="active">
@@ -38,3 +40,6 @@ export default class Sidebar extends Component {
     )
   }
 }
+
+export default (Sidebar)
+// export default connect(null, { toggle_sidebar })(Sidebar)

@@ -2,15 +2,15 @@ import React, { Component } from 'react'
 import { AppBar, IconMenu, IconButton } from 'material-ui'
 import MenuIcon from 'material-ui/svg-icons/navigation/menu'
 import CloseIcon from 'material-ui/svg-icons/navigation/close'
-export default class Header extends Component {
+import { connect } from 'react-redux'
+import { toggle_sidebar } from '../actions/general'
+
+class Header extends Component {
   constructor(props) {
     super(props)
-    // this.handleSidebar = this.handleSidebar.bind(this)
+    this.handleSidebar = this.handleSidebar.bind(this)
   }
 
-  //   handleSidebar() {
-  //     this.props.handleSidebar()
-  //   }
   setIcon() {
     if (this.props.icon === 'menu') {
       return <MenuIcon />
@@ -18,6 +18,12 @@ export default class Header extends Component {
       return <CloseIcon />
     }
   }
+
+  handleSidebar() {
+    this.props.toggle_sidebar()
+    this.props.handleToggle()
+  }
+  
   render() {
     if (this.props.data) {
       const value = this.props.data[0].value
@@ -29,15 +35,11 @@ export default class Header extends Component {
         title={this.props.title}
         className="header"
         iconElementLeft={
-          <IconButton
-            onClick={() => {
-              this.props.handleToggle()
-            }}
-          >
-            {this.setIcon()}
-          </IconButton>
+          <IconButton onClick={this.handleSidebar}>{this.setIcon()}</IconButton>
         }
       />
     )
   }
 }
+
+export default connect(null, { toggle_sidebar })(Header)
