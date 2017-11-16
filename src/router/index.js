@@ -16,10 +16,9 @@ class Navigation extends Component {
               ? ''
               : 'container-collapsed'}`}
           >
-            <div className="row">
-              <div className="col-12">
-                <Routes />
-              </div>
+            <h3 className="title">{this.props.title}</h3>
+            <div className="row sub-container">
+              <Routes />
             </div>
           </div>
         </div>
@@ -39,7 +38,7 @@ const Routes = () => {
 }
 
 function mapStateToProps({ general }) {
-  return { sidebarStatus: general.sidebarStatus }
+  return { sidebarStatus: general.sidebarStatus, title: general.title }
 }
 
 export default connect(mapStateToProps, { sidebar_status })(Navigation)

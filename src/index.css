@@ -9,13 +9,27 @@ body {
 }
 
 .container {
-  margin: 25px 25px 25px 300px !important;
-  width: calc(100% - 350px) !important;
+  margin: 0px 0px 0px 256px !important;
+  padding-top: 25px;
+  width: calc(100% - 256px) !important;
+  height: calc(100vh - 60px) !important;
+  background-color: rgba(115, 115, 117, 0.05) !important;
 }
 
 .container-collapsed {
-  margin-left: 25px !important;
-  width: calc(100% - 25px) !important;
+  margin-left: 0px !important;
+  width: 100% !important;
+}
+.title {
+  width: 80%;
+  margin: auto !important;
+  padding-bottom: 25px;
+}
+.sub-container {
+  width: 80%;
+  margin: auto !important;
+  padding: 50px;
+  background-color: white;
 }
 
 a {

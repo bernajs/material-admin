@@ -18,7 +18,8 @@ export default class FAB extends Component {
         <NavLink
           to={{
             pathname: `/agregar/${this.props.route}`,
-            state: this.props.data
+            state: this.props.data,
+            title: this.props.title
           }}
         >
           <FloatingActionButton style={this.state.position}>
